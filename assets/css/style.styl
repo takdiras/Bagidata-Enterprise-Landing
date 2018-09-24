@@ -18,17 +18,16 @@ m(name)
     img
         height 40px
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link
+.navbar-light .navbar-nav .nav-link:hover
     color #e83aaa
 
 .header
     width 100%
-    height 100vh
+    min-height 100vh
     background-color #000
     background url('../images/header.png')
     background-size cover
     background-repeat no-repeat
-    margin-top -57px
     display flex
     justify-content center
     align-items center
@@ -95,10 +94,10 @@ m(name)
     +e(number)
         margin 0
         color #03A98A
-        font-size 6em
+        font-size 6rem
         font-weight 700
     +e(title)
-        font-size 2em
+        font-size 2rem
         font-weight 600
         margin-top .7em
     +e(btn)
@@ -132,7 +131,7 @@ m(name)
         +e(content)
             padding: 30px
         +e(desc)
-            font-size .7em
+            font-size .7rem
 .media
     margin 0 150px
     justify-content center
@@ -151,8 +150,10 @@ m(name)
         box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
         z-index 10
         +e(img)
-            width 150px
+            width 100%
+            max-width 150px
         +e(title)
+            font-size 1rem
             margin-top 20px
         +e(price)
             color #F9C365
@@ -217,10 +218,22 @@ m(name)
         padding 20px 10px
         img
             height 40px
+.nav-custom
+    background transparent
+    transition all 200ms linear
+    a
+        color white
+    a:hover
+        color #e83aaa
+.nav-color
+    background #eee
+    a
+        color black
 
-@media only screen and (max-width: 600px)
+@media only screen and (max-width: 770px)
     body
         font-size 10px
+        overflow-x hidden
     .header
         background-position center 
     .header-content
@@ -263,14 +276,29 @@ m(name)
     .footer
         margin 20px 50px
         .footer-top
-            display: none
+            padding-bottom 15px
+            border-bottom 1px solid #ddd
         .footer-bottom
             justify-content center
             border none
+            padding 20px 0
+            flex-flow column
+            +e(item)
+                padding 10px 0
             +e(copyright)
-                display none
+                display inherit
             +e(download)
-                display none
+                display inherit
             +e(social-media)
                 img
-                    height 30px      
+                    height 30px
+        .footer-list
+            display none
+            .list-group
+                padding 0
+            +m(show)
+                display inherit
+                text-align center
+    .btn
+        min-width 90px
+        padding 5px 30px
