@@ -10,6 +10,20 @@ h4,
 h5 {
   font-family: 'Barlow', sans-serif;
 }
+#loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, #212f61 0%, #021744 100%);
+  z-index: 100000;
+  color: #fff;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 .navbar-brand img {
   height: 40px;
 }
