@@ -31,7 +31,7 @@
         <img src="assets/images/loading.svg" alt="">
         <p>Loading...</p>
     </div>
-    <nav id="navbar" class="navbar fixed-top navbar-expand-lg nav-custom">
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg nav-color">
         <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +54,7 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-cta my-2 my-sm-0">Mulai Sekarang</button>
+                <button class="btn btn--cta my-2 my-sm-0">Mulai Sekarang</button>
             </form>
         </div>
     </nav>
@@ -98,9 +98,6 @@
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ab numquam, eos cumque, aut
                             nulla excepturi officia natus adipisci totam, molestiae similique delectus laboriosam est
                             neque aperiam provident nemo consequuntur?</p>
-                        <div class="benefit__btn">
-                            <button class="btn btn--default">Baca Selengkapnya</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -123,9 +120,6 @@
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ab numquam, eos cumque, aut
                             nulla excepturi officia natus adipisci totam, molestiae similique delectus laboriosam est
                             neque aperiam provident nemo consequuntur?</p>
-                        <div class="benefit__btn">
-                            <button class="btn btn--default">Baca Selengkapnya</button>
-                        </div>
                     </div>
                 </div>
                 <div id="switch2" class="benefit__img benefit__img--swipe col-md-6 col-sm-12">
@@ -154,9 +148,6 @@
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ab numquam, eos cumque, aut
                             nulla excepturi officia natus adipisci totam, molestiae similique delectus laboriosam est
                             neque aperiam provident nemo consequuntur?</p>
-                        <div class="benefit__btn">
-                            <button class="btn btn--default">Baca Selengkapnya</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -273,18 +264,22 @@
                         <div class="offer-item__title-container">
                             <h3 class="offer-item__title">Mobile App</h3>
                         </div>
-                        <span>Promosi melalui aplikasi Bagidata</span>
+                        <div class="offer-item__desc">
+                            <span>Promosi melalui aplikasi Bagidata</span>
+                        </div>
                         <h2 class="offer-item__price">
-                            <sup class="offer-item__sup">Rp</sup>200 <span class="offer-item__price--unit">| Click</span>
+                            <sup class="offer-item__sup">Rp</sup>200 <span class="offer-item__price--unit"><br>| Click</span>
                         </h2>
                         <button class="btn">Beli</button>
                     </div>
                     <div class="swiper-slide offer-item--best">
                         <img src="assets/images/offer2.png" alt="" class="offer-item__img">
                         <h3 class="offer-item__title">SMS</h3>
-                        <span>Promosi langsung melalui SMS</span>
+                        <div class="offer-item__desc">
+                            <span class="offer-item__desc">Promosi langsung melalui SMS</span>
+                        </div>
                         <h2 class="offer-item__price">
-                            <sup class="offer-item__sup">Rp</sup>450.000 <span class="offer-item__price--unit">| 1000
+                            <sup class="offer-item__sup">Rp</sup>450.000 <span class="offer-item__price--unit"><br>| 1000
                                 User</span>
                         </h2>
                         <button class="btn btn--cta">Beli</button>
@@ -292,9 +287,11 @@
                     <div class="swiper-slide offer-item">
                         <img src="assets/images/offer3.png" alt="" class="offer-item__img">
                         <h3 class="offer-item__title">Email</h3>
-                        <span>Promosi langsung melalui Email</span>
+                        <div class="offer-item__desc">
+                            <span class="offer-item__desc">Promosi langsung melalui Email</span>
+                        </div>
                         <h2 class="offer-item__price">
-                            <sup class="offer-item__sup">Rp</sup>150.000 <span class="offer-item__price--unit">| 1000
+                            <sup class="offer-item__sup">Rp</sup>150.000 <span class="offer-item__price--unit"><br>| 1000
                                 User</span>
                         </h2>
                         <button class="btn">Beli</button>
@@ -302,9 +299,11 @@
                     <div class="swiper-slide offer-item--back">
                         <img src="assets/images/offer4.png" alt="" class="offer-item__img">
                         <h3 class="offer-item__title">Chat WhatsApp</h3>
-                        <span>Promosi langsung melalui WhatsApp</span>
+                        <div class="offer-item__desc">
+                            <span class="offer-item__desc">Promosi langsung melalui WhatsApp</span>
+                        </div>
                         <h2 class="offer-item__price">
-                            <sup class="offer-item__sup">Rp</sup>250.000 <span class="offer-item__price--unit">| 1000
+                            <sup class="offer-item__sup">Rp</sup>250.000 <span class="offer-item__price--unit"><br>| 1000
                                 User</span>
                         </h2>
                         <button class="btn">Beli</button>
@@ -315,7 +314,7 @@
 
             <!-- ARTIKEL SECTION -->
 
-            <h2 class="section__title" data-av-animation="fadeInUp">Artikel</h2>
+            <h2 class="section__title" data-av-animation="fadeInUp">BagiMomen</h2>
             <div class="article swiper-container swiper2" data-av-animation="slideInRight">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide article-item">
@@ -418,8 +417,11 @@
             contentSwipe2.classList.add('order-1');
             slide1 = 1
             startItem1 = 0
-        } else {
+        } else if (screenWidth > 1024) {
             slide1 = 5
+            startItem1 = 1
+        } else {
+            slide1 = 3
             startItem1 = 1
         }
 
@@ -473,18 +475,6 @@
                 clickable: true,
             },
         });
-
-        var navbar = document.getElementById('navbar')
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
-                if (scroll > 300) {
-                    $(".nav-custom").addClass("nav-color");
-                } else {
-                    $(".nav-custom").removeClass("nav-color");
-                }
-            })
-        })
 
         $(document).ready(function () {
             $('.header').AniView();

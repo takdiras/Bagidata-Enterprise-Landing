@@ -1,10 +1,13 @@
 body
-    font-family 'Source Sans Pro', sans-serif
+    font-family 'Barlow', sans-serif
     font-size 18px
     overflow-x hidden
 
 h1,h2,h3,h4,h5
     font-family 'Barlow', sans-serif
+
+p
+    font-family 'Source Sans Pro', sans-serif
 
 e(name)
     &__{name}
@@ -37,7 +40,7 @@ m(name)
 
 .header
     width 100%
-    min-height 100vh
+    height 88vh
     background-color #000
     background url('../images/header.png')
     background-size cover
@@ -49,14 +52,17 @@ m(name)
 .header-content
     color white
     text-align center
-    margin 0 200px
+    display flex
+    flex-flow column nowrap
+    align-items center
+    padding 100px 50px 50px
     +e(title)
         text-transform uppercase
-        font-size 4em
+        font-size 3em
         font-weight 600
         margin 0 auto
     +e(subtitle)
-        font-size 3em
+        font-size 2em
         font-weight 500
     +e(desc)
         margin-top 60px
@@ -88,14 +94,14 @@ m(name)
     text-align center
     +e(title)
         font-weight 700
-        margin-bottom 50px
+        margin-bottom 10px
         margin-top 50px
     +m(bgrey)
         padding-top 10px
         background-color #F7F8F8
 
 .benefit
-    margin 150px 150px
+    margin 75px 150px
     +e(img)
         padding 10px 50px
         margin: 0 auto
@@ -103,7 +109,7 @@ m(name)
         img
             width 100%
     +e(content)
-        padding 30px
+        padding 10px 30px
         text-align left
     +e(number)
         margin 0
@@ -136,9 +142,11 @@ m(name)
     .user-item
         background-color #fff
         border-radius 20px
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        box-shadow 0px 2px 6px rgba(0,0,0,.2)
         +e(img)
-            height auto
+            height 240px
+            display flex
+            align-items center
             img
                 width 100%
                 height auto
@@ -149,6 +157,7 @@ m(name)
 .media
     margin 0 150px
     justify-content center
+    align-items center
     +e(items)
         width 100%
 .offer
@@ -158,22 +167,22 @@ m(name)
     margin-bottom 100px
     padding 100px
     .offer-item
-        padding 50px
+        padding 30px
         background-color #fff
         border-radius 20px
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        box-shadow 0px 2px 6px rgba(0,0,0,.2)
         z-index 10
         +e(img)
             width 100%
             max-width 150px
         +e(title)
-            font-size 1rem
+            font-size 1.3rem
             margin-top 20px
         +e(price)
             color #F9C365
-            font-size 2em
             font-weight 700
-            margin 70px 0
+            margin 40px 0
+            line-height .8
             +m(unit)
                 color black
                 font-weight normal
@@ -182,18 +191,21 @@ m(name)
             color black
             font-size .6em
             font-weight normal
+        +e(desc)
+            font-size 1em
+            height 3em
         +m(best)
-            padding 50px
+            padding 30px
             background-color #fff
             border-radius 20px
-            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            box-shadow 0px 2px 6px rgba(0,0,0,.2)
             z-index 100
             transform scale(1.1)
         +m(back)
-            padding 50px
+            padding 30px
             background-color #fff
             border-radius 20px
-            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+            box-shadow 0px 2px 6px rgba(0,0,0,.2)
             z-index 1
 .article
     padding 50px 100px;
@@ -201,7 +213,7 @@ m(name)
     width 400px
     border-radius 20px
     background-color #fff
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow 0px 2px 6px rgba(0,0,0,.2)
     +e(img)
         width 100%
         height auto
@@ -280,13 +292,15 @@ m(name)
     .offer
         margin-bottom 50px
         .offer-item
-            padding 20px
+            padding 10px
             +e(price)
                 margin 30px 0
+            +e(title)
+                height 2em
             +m(best)
-                padding 20px
+                padding 10px
             +m(back)
-                padding 20px
+                padding 10px
     .footer
         margin 20px 50px
         .footer-top
