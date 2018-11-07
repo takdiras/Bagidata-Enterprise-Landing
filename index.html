@@ -256,7 +256,7 @@
         <div class="section--bgrey">
             <h2 class="section__title" data-av-animation="fadeInUp">Penawaran Kami</h2>
             <div class="offer swiper-container swiper3" data-av-animation="slideInUp">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper offer-wrapper">
                     <div class="swiper-slide offer-item">
                         <div class="offer-item__img-container">
                             <img src="assets/images/offer1.png" alt="" class="offer-item__img">
@@ -270,9 +270,9 @@
                         <h2 class="offer-item__price">
                             <sup class="offer-item__sup">Rp</sup>200 <span class="offer-item__price--unit"><br>| Click</span>
                         </h2>
-                        <button class="btn">Beli</button>
+                        <button class="btn btn-outline-cta">Beli</button>
                     </div>
-                    <div class="swiper-slide offer-item--best">
+                    <div class="swiper-slide offer-item">
                         <img src="assets/images/offer2.png" alt="" class="offer-item__img">
                         <h3 class="offer-item__title">SMS</h3>
                         <div class="offer-item__desc">
@@ -282,7 +282,7 @@
                             <sup class="offer-item__sup">Rp</sup>450.000 <span class="offer-item__price--unit"><br>| 1000
                                 User</span>
                         </h2>
-                        <button class="btn btn--cta">Beli</button>
+                        <button class="btn btn-outline-cta">Beli</button>
                     </div>
                     <div class="swiper-slide offer-item">
                         <img src="assets/images/offer3.png" alt="" class="offer-item__img">
@@ -294,9 +294,9 @@
                             <sup class="offer-item__sup">Rp</sup>150.000 <span class="offer-item__price--unit"><br>| 1000
                                 User</span>
                         </h2>
-                        <button class="btn">Beli</button>
+                        <button class="btn btn-outline-cta">Beli</button>
                     </div>
-                    <div class="swiper-slide offer-item--back">
+                    <div class="swiper-slide offer-item">
                         <img src="assets/images/offer4.png" alt="" class="offer-item__img">
                         <h3 class="offer-item__title">Chat WhatsApp</h3>
                         <div class="offer-item__desc">
@@ -306,7 +306,7 @@
                             <sup class="offer-item__sup">Rp</sup>250.000 <span class="offer-item__price--unit"><br>| 1000
                                 User</span>
                         </h2>
-                        <button class="btn">Beli</button>
+                        <button class="btn btn-outline-cta">Beli</button>
                     </div>
                 </div>
                 <div class="swiper-pagination swiper-pagination3"></div>
@@ -418,7 +418,7 @@
             slide1 = 1
             startItem1 = 0
         } else if (screenWidth > 1024) {
-            slide1 = 5
+            slide1 = 3.6
             startItem1 = 1
         } else {
             slide1 = 3
@@ -435,9 +435,9 @@
 
         if (screenWidth <= 768) {
             slide3 = 1
-            startItem3 = 1
+            startItem3 = 0
         } else {
-            slide3 = 4
+            slide3 = 5
             startItem3 = 1
         }
 
@@ -458,7 +458,7 @@
             centeredSlides: true,
             spaceBetween: 50,
             grabCursor: true,
-            initialSlide: 0,
+            initialSlide: startItem2,
             pagination: {
                 el: '.swiper-pagination2',
                 clickable: true,
@@ -467,6 +467,8 @@
 
         var swiper3 = new Swiper('.swiper3', {
             slidesPerView: slide3,
+            setWrapperSize: true,
+            freeMode: true,
             spaceBetween: 0,
             grabCursor: true,
             initialSlide: startItem3,

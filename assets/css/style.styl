@@ -87,8 +87,11 @@ m(name)
             background-color #212F61
             box-shadow: 0 0 10px rgba(33,47,97,0.80), 0 0 10px rgba(33,47,97,0.60)
 .btn-outline-cta
-        background-color transparent
-        border 1px solid #e83aaa
+    background-color transparent
+    border 1px solid #e83aaa
+    &:hover
+        background-color #e83aaa
+        color white
 
 .section
     text-align center
@@ -166,12 +169,17 @@ m(name)
     justify-content center
     margin-bottom 100px
     padding 100px
-    .offer-item
-        padding 30px
+    .offer-wrapper
         background-color #fff
-        border-radius 20px
+        border-radius 10px
         box-shadow 0px 2px 6px rgba(0,0,0,.2)
-        z-index 10
+        padding 30px
+        display flex
+        justify-content center
+        margin-left auto
+        margin-right auto
+    .offer-item
+        margin 0 10px
         +e(img)
             width 100%
             max-width 150px
@@ -194,21 +202,8 @@ m(name)
         +e(desc)
             font-size 1em
             height 3em
-        +m(best)
-            padding 30px
-            background-color #fff
-            border-radius 20px
-            box-shadow 0px 2px 6px rgba(0,0,0,.2)
-            z-index 100
-            transform scale(1.1)
-        +m(back)
-            padding 30px
-            background-color #fff
-            border-radius 20px
-            box-shadow 0px 2px 6px rgba(0,0,0,.2)
-            z-index 1
 .article
-    padding 50px 100px;
+    padding 50px 150px;
 .article-item
     width 400px
     border-radius 20px
@@ -263,22 +258,29 @@ m(name)
     .header
         background-position center 
     .header-content
-        margin 0 50px
+        padding 100px 20px
         +e(desc)
             font-size 12px
+            margin 10px 0
     .section
         +e(title)
             margin 20px 50px
     .article
-        padding 50px 20px 50px 50px
+        padding 20px
     .benefit
         margin 50px
         +e(img)
             padding 0
         +e(content)
             padding 0 15px
+            .row
+                align-items flex-end
+                .col-4
+                    padding 0
         +e(btn)
             text-align right
+        +e(number)
+            font-size 5rem
     .solution
         margin 20px 20px
         .solution-item
@@ -291,10 +293,12 @@ m(name)
             padding 0
     .offer
         margin-bottom 50px
+        justify-content flex-start
         .offer-item
             padding 10px
             +e(price)
                 margin 30px 0
+                font-size 1rem
             +e(title)
                 height 2em
             +m(best)
